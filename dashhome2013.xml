@@ -1,0 +1,4166 @@
+<manifest>
+  <id>dashhome</id>
+  <culture>en-US</culture>
+  <sysexts>
+    <sysext>
+      <name>luaext.xex</name>
+      <tag>LUAXZP</tag>
+    </sysext>
+  </sysexts>
+  <defaultchannelid>HOME___LONDON</defaultchannelid>
+  <webreportingsampling>100</webreportingsampling>
+  <infomode>Gamertag</infomode>
+  <description>DashHome New Hotness</description>
+  <surface>yes</surface>
+  <channel>
+    <id>BING</id>
+    <description>bing</description>
+    <definitionpath>channel://dash.search.lex/ShowIOTD;ImageURL="http://epix.xbox.com/shaXam/0201/4f/e4/4fe49fa7-ace9-40cc-adad-9e903073a50c.JPG?v=1";PhotoCredits="Overflow from Lower Nihotupu Reservoir near Auckland, New Zealand – © Robin Bush / Oxford Scientific / Getty Images";</definitionpath>
+  </channel>
+  <channel>
+    <id>HOME___LONDON</id>
+    <channeldef layouttemplate="epix://template1hd.xur">
+      <description>home</description>
+      <type>online</type>
+      <vui>
+        <phrase>Home</phrase>
+        <phrase>Go Home</phrase>
+      </vui>
+      <slotgroup>
+        <slot>
+          <definitionpath>slot://DiscInTray</definitionpath>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:H:FAM:TM:Epic0813</name>
+          <vui>
+            <visiblephrase>Epic</visiblephrase>
+            <phrase>Epic</phrase>
+            <phrase>Epic</phrase>
+          </vui>
+          <description>Explore a Fantastical World: Watch Epic</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ff/d2/ffd22f18-0ff5-462d-869c-ccd5ca845433.JPG?v=1#slot-Epic-01-466x264.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieDetailsPage?Id=C3D652A0-B877-4F88-AAD9-0C7055D4F803</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.90000:0 == 90001">
+          <name>L:H:SVR:90000:CTR</name>
+          <vui>
+            <visiblephrase>Download Now</visiblephrase>
+            <phrase>download now</phrase>
+            <phrase>download</phrase>
+          </vui>
+          <description>Download New Games Today</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fa/d2/fad2334e-8fcd-4675-b57d-ec3f1c982516.JPG?v=1#slot_Silver-NuApp-Controller_466x264-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>DashGamesMP-London.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.90000:0 == 90002">
+          <name>L:H:SVR:90000:NPS FIFA 3+1</name>
+          <vui>
+            <visiblephrase>Go Gold</visiblephrase>
+            <phrase>Go Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Get Ready for FIFA 14 with Gold</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/9e/b3/9eb3d3c5-2c8b-4142-8116-a25ba5b4eea7.JPG?v=1#EN-Silver-FIFA-v1A.JPG</shallowimg>
+          <condition>EcoGamePlayed(45410998)</condition>
+          <condition>EcoGamePlayed(45410967)</condition>
+          <condition>EcoGameOfferAvailable(1,454109C3,00080000,847DBF8505A4DEBDA4AAF2DD7DA1561505FAA126)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/14/66/14667090-a7b0-4310-8fcb-9e5f692d1241.lzp?v=1#BDE-EN-US-Silver-FIFA14-Pre-v1A.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.90000:0 == 90002">
+          <name>L:H:SVR:90000:NPS GWG - RB6V</name>
+          <vui>
+            <visiblephrase>Go Gold</visiblephrase>
+            <phrase>Go Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Go Gold Today for FREE Games</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/73/bf/73bfe070-dfeb-4017-a0e0-14d51be37420.JPG?v=1#EN-Silver-P2-12MO-v2A.JPG</shallowimg>
+          <condition>EcoLiveTier(Silver)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/b2/b8/b2b8c19b-bb95-4dd9-aab3-a7f18ed97962.lzp?v=1#scr2-BDE-EN-US-2P-12MO-v3A.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.90000:0 in [90003,90004]">
+          <name>L:H:SVR:90000:PPS FIFA 12+2</name>
+          <vui>
+            <visiblephrase>Go Gold</visiblephrase>
+            <phrase>Go Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Get Ready for FIFA 14 with Gold</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/9e/b3/9eb3d3c5-2c8b-4142-8116-a25ba5b4eea7.JPG?v=1#EN-Silver-FIFA-v1A.JPG</shallowimg>
+          <condition>EcoGamePlayed(45410998)</condition>
+          <condition>EcoGamePlayed(45410967)</condition>
+          <condition>EcoGameOfferAvailable(1,454109C3,00080000,847DBF8505A4DEBDA4AAF2DD7DA1561505FAA126)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/c1/44/c144bde5-ad21-4f3d-8ebf-4460887f2810.lzp?v=4#BDE-EN-US-Silver-12%2b1-FIFA14-Pre-v1A.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.90000:0 in [90003,90004]">
+          <name>L:H:SVR:90000:PPS GWG - RB6V</name>
+          <vui>
+            <visiblephrase>Go Gold</visiblephrase>
+            <phrase>Go Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Join Gold Where Members Get Free Games</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/73/bf/73bfe070-dfeb-4017-a0e0-14d51be37420.JPG?v=1#EN-Silver-P2-12MO-v2A.JPG</shallowimg>
+          <condition>EcoLiveTier(Silver)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/b2/b8/b2b8c19b-bb95-4dd9-aab3-a7f18ed97962.lzp?v=1#scr2-BDE-EN-US-2P-12MO-v3A.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:SVR:Fallback GWG - RB6V</name>
+          <vui>
+            <visiblephrase>Go Gold</visiblephrase>
+            <phrase>Go Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Join Gold Where Members Get Free Games</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/73/bf/73bfe070-dfeb-4017-a0e0-14d51be37420.JPG?v=1#EN-Silver-P2-12MO-v2A.JPG</shallowimg>
+          <condition>EcoLiveTier(Silver)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/b2/b8/b2b8c19b-bb95-4dd9-aab3-a7f18ed97962.lzp?v=1#scr2-BDE-EN-US-2P-12MO-v3A.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G12MR:12M:CC</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $5/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,8000001A-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,8000001B-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000022-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/f2/21/f221a03b-7806-42d5-b8e0-3dad0d02fdd9.lzp?v=1#BDE-EN_US-Gold-12MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G3MR:3M:CC</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $8.33/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000019-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000094-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/35/9a/359a44d7-340b-402d-a062-5f41fa7b1e62.lzp?v=1#BDE-EN_US-Gold-3MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G12MO:12M:CC:FB</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $5/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,8000000A-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000051-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,8000002A-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/f2/21/f221a03b-7806-42d5-b8e0-3dad0d02fdd9.lzp?v=1#BDE-EN_US-Gold-12MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G3MO:6M:CC:FB</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $6.67/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000009-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000037-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000112-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/81/52/81520076-9342-46f6-ad67-532d132de8af.lzp?v=1#BDE-EN_US-Gold-6MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G1MO:3M:CC:FB</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $8.33/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000008-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000039-0000-4000-8000-0000FFFE07D1)</condition>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,8000002B-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/35/9a/359a44d7-340b-402d-a062-5f41fa7b1e62.lzp?v=1#BDE-EN_US-Gold-3MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:GLD:12M:CC:FB</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $5/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,8000004A-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/f2/21/f221a03b-7806-42d5-b8e0-3dad0d02fdd9.lzp?v=1#BDE-EN_US-Gold-12MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:1MR:3M:CC:FB</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $8.33/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>
+            <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000020-0000-4000-8000-0000FFFE07D1)</condition>
+            <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000018-0000-4000-8000-0000FFFE07D1)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/35/9a/359a44d7-340b-402d-a062-5f41fa7b1e62.lzp?v=1#BDE-EN_US-Gold-3MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:3MO:6M:CC:FB:OO</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $6.67/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000112-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/81/52/81520076-9342-46f6-ad67-532d132de8af.lzp?v=1#BDE-EN_US-Gold-6MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:6MO:12M:CC:FB:OO</name>
+          <vui>
+            <visiblephrase>Renew Gold</visiblephrase>
+            <phrase>Renew Gold</phrase>
+            <phrase>Gold</phrase>
+          </vui>
+          <description>Don't Lose Gold – Renew Now for $5/Month</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f5/e6/f5e69309-57a1-41ff-bb2d-f36ffa671276.JPG?v=1#Slot-EN_US-Gold-6MFP-JuneUpdate-v2.JPG</shallowimg>
+          <condition>EcoSubscriptionEnding(1,15,FFFE07D1,80000099-0000-4000-8000-0000FFFE07D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/f2/21/f221a03b-7806-42d5-b8e0-3dad0d02fdd9.lzp?v=1#BDE-EN_US-Gold-12MFP-GoldWorks-jun10-v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:FIFA14Demo0923</name>
+          <vui>
+            <visiblephrase>FIFA 14</visiblephrase>
+            <phrase>Fee Fah 14</phrase>
+            <phrase>Fee Fuh Fourteen</phrase>
+          </vui>
+          <description>FIFA 14 Arrives Tomorrow: Play the Demo Today</description>
+          <rating>10</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/cb/74/cb748578-97db-4d37-9729-f8920f330f84.JPG?v=1#slot-FIFA14-01-466x264.JPG</shallowimg>
+          <condition>
+            <condition>EcoGamePlayed(45410998)</condition>
+            <condition>!EcoGameOfferAvailable(1,454109C3,00080000,847DBF8505A4DEBDA4AAF2DD7DA1561505FAA126)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802454109c3;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:BDE:GTAVLaunch0923</name>
+          <vui>
+            <visiblephrase>GTA V</visiblephrase>
+            <phrase>G T A Five</phrase>
+            <phrase>Gee Tee Ay Five</phrase>
+          </vui>
+          <description>GTA V: Can You Pull Off the Perfect Heist?</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/0e/9b/0e9b6a94-aa93-470f-879a-9bee22ef5bcb.JPG?v=1#slot-grandtheftautoV-03-466x264.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/1b/5e/1b5ebfe6-c372-4cc5-a86e-d2f4de80a5f4.lzp?v=1#BDE_GTAV_EN-US_v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:FB:TM:Epic0813</name>
+          <vui>
+            <visiblephrase>Epic</visiblephrase>
+            <phrase>Epic</phrase>
+            <phrase>Epic</phrase>
+          </vui>
+          <description>Explore a Fantastical World: Watch Epic</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ff/d2/ffd22f18-0ff5-462d-869c-ccd5ca845433.JPG?v=1#slot-Epic-01-466x264.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieDetailsPage?Id=C3D652A0-B877-4F88-AAD9-0C7055D4F803</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:H:X1 - Family</name>
+          <vui>
+            <visiblephrase>Learn More</visiblephrase>
+            <phrase>Learn More</phrase>
+            <phrase>Learn</phrase>
+          </vui>
+          <description>Learn More</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7d/04/7d04a742-e7fc-4853-ba9a-5fa27803b7ae.JPG?v=1#X1-174x130-v1.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-xboxonevideos.xml</param>
+            <param2>da10e22e-617d-4dfb-82b2-01dff517e530</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:X1 - Titanfall</name>
+          <vui>
+            <visiblephrase>Learn More</visiblephrase>
+            <phrase>Learn More</phrase>
+            <phrase>Titanfall</phrase>
+          </vui>
+          <description>Xbox One</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/00/2b/002bfc3d-b16e-479b-b40a-878291be53e3.JPG?v=1#slot-Titanfall-02-174x130-V2.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-xboxonevideos.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:FB:G:SonicAdventure2 0813</name>
+          <description>Battle for Earth</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/50/9e/509ea1ec-a3fb-45fa-8566-b3c9766c9c95.JPG?v=1#slot-SonicAdventure2-174x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d80258411202;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Pins</name>
+          <vui>
+            <phrase>My Pins</phrase>
+            <responsetype>Maintain</responsetype>
+            <message>Launching My Pins...</message>
+          </vui>
+          <description>My Pins</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_overlay_bookmark.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>userpins:</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:H:XS:FAM:ESPNGeneric</name>
+          <vui>
+            <visiblephrase>Sports</visiblephrase>
+            <phrase>Sports</phrase>
+          </vui>
+          <description>ESPN</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/32/b8/32b814b2-3226-4aba-8a7f-599341d232ce.JPG?v=1#slot-ESPN-Soccer-Generic-174x130-v1.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:5848086A</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:XS:MNFRaiVsBron 0923</name>
+          <vui>
+            <visiblephrase>Sports</visiblephrase>
+            <phrase>Sports</phrase>
+            <phrase>Sports</phrase>
+          </vui>
+          <description>@ 8:25 PM ET</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ab/11/ab111e72-7c49-4aca-a0d5-1fbefbac5356.JPG?v=1#slot-ESPNMondayNightFootball-174x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-xboxsports.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:XS:FB:ESPNGenericToHub</name>
+          <vui>
+            <visiblephrase>Sports</visiblephrase>
+            <phrase>Sports</phrase>
+          </vui>
+          <description>Sports on Xbox</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/32/b8/32b814b2-3226-4aba-8a7f-599341d232ce.JPG?v=1#slot-ESPN-Soccer-Generic-174x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-xboxsports.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Quickplay</name>
+          <vui>
+            <visiblephrase>%EvResStr(IDS_SLOT_QUICKPLAY_VUI_DISPLAY_ALT)%</visiblephrase>
+            <phrase>%EvResStr(IDS_SLOT_QUICKPLAY_VUI_PRON)%</phrase>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>%EvResStr(IDS_SLOT_QUICKPLAY_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_clock.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>contentlibrary:_SlotCount=10;SortOrder=2;_Launch=true;_Quickplay</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:H:FAM:TM:JusticeLeague0813</name>
+          <vui>
+            <visiblephrase>Justice League</visiblephrase>
+            <phrase>Justice League</phrase>
+            <phrase>Justice League</phrase>
+          </vui>
+          <description>Justice League</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/46/42/4642193f-1cf2-4b47-b94f-3688ff51bd62.JPG?v=1#slot-flashpointparadox-02-231x130-v2.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieDetailsPage?Id=83742ceb-7fc4-426e-9321-b720692f82a3</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:F:Welcome</name>
+          <vui>
+            <visiblephrase>Explore Xbox LIVE</visiblephrase>
+            <phrase>Explore Xbox LIVE</phrase>
+            <phrase>Explore</phrase>
+          </vui>
+          <description>Explore Xbox Live</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/50/d8/50d86f24-57f6-4b5c-a040-f4376522fa22.JPG?v=1#slot-Welcome-Entry-Logo-Blue-231x130-v1.JPG</shallowimg>
+          <condition>EcoLiveTier(none)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeFreebird.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77007">
+          <name>L:H:G:T:WelcomeWeek1:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to LIVE</visiblephrase>
+            <phrase>Welcome to LIVE</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Welcome to Xbox Live</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f0/64/f0642c33-1b60-4ea5-acf9-419b03866dc0.JPG?v=1#slot-Welcome-Entry-Green-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeTrialistWk1.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77008">
+          <name>L:H:G:T:WelcomeWeek2:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to TV &amp; Movies</visiblephrase>
+            <phrase>Welcome to TV and Movies</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Entertainment on Xbox</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/49/b2/49b2ec0b-2d23-4411-a06d-a0c4e61a6b76.JPG?v=1#slot-Welcome-Entertainment-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeTrialistWk2.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77009">
+          <name>L:H:G:T:WelcomeWeek3:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to Games</visiblephrase>
+            <phrase>Welcome to Games</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Welcome to Games</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7e/3f/7e3fcc6f-63ab-43f1-b145-06c425592c92.JPG?v=1#slot-Welcome-Games-Halo-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeTrialistWk3.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77010">
+          <name>L:H:G:T:WelcomeWeek4:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to Rewards</visiblephrase>
+            <phrase>Welcome to Rewards</phrase>
+            <phrase>Welcome </phrase>
+          </vui>
+          <description>Free Games with Gold</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/d7/88/d788f858-9b17-4ba0-986c-6a4f76f52a75.JPG?v=1#GWG-slot-231x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeTrialistWk4.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77006">
+          <name>L:H:G:T:WelcomeCtrl:XP:77000</name>
+          <vui>
+            <visiblephrase>Download Happy Wars</visiblephrase>
+            <phrase>Happy Wars</phrase>
+          </vui>
+          <description>Download Happy Wars</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/08/f8/08f88d89-8590-4830-a138-71e2caf7c6df.JPG?v=1#slot-HappyWars-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d80258410ae9;</param>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77002">
+          <name>L:H:G:G:WelcomeWeek1:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to LIVE</visiblephrase>
+            <phrase>Welcome to LIVE</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Welcome to Xbox Live</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f0/64/f0642c33-1b60-4ea5-acf9-419b03866dc0.JPG?v=1#slot-Welcome-Entry-Green-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeGoldWk1.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77003">
+          <name>L:H:G:G:WelcomeWeek2:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to TV &amp; Movies</visiblephrase>
+            <phrase>Welcome to TV and Movies</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Entertainment on Xbox</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/49/b2/49b2ec0b-2d23-4411-a06d-a0c4e61a6b76.JPG?v=1#slot-Welcome-Entertainment-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeGoldWk2.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77004">
+          <name>L:H:G:G:WelcomeWeek3:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to Games</visiblephrase>
+            <phrase>Welcome to Games</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Welcome to Games</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7e/3f/7e3fcc6f-63ab-43f1-b145-06c425592c92.JPG?v=1#slot-Welcome-Games-Halo-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeGoldWk3.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77005">
+          <name>L:H:G:G:WelcomeWeek4:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to Rewards</visiblephrase>
+            <phrase>Welcome to Rewards</phrase>
+            <phrase>Welcome </phrase>
+          </vui>
+          <description>Free Games with Gold</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/d7/88/d788f858-9b17-4ba0-986c-6a4f76f52a75.JPG?v=1#GWG-slot-231x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeGoldWk4.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77001">
+          <name>L:H:G:G:WelcomeCtrl:XP:77000</name>
+          <vui>
+            <visiblephrase>Download Happy Wars</visiblephrase>
+            <phrase>Happy Wars</phrase>
+          </vui>
+          <description>Download Happy Wars</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/08/f8/08f88d89-8590-4830-a138-71e2caf7c6df.JPG?v=1#slot-HappyWars-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d80258410ae9;</param>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77012">
+          <name>L:H:G:S:WelcomeWeek1:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to LIVE</visiblephrase>
+            <phrase>Welcome to LIVE</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Welcome to Xbox Live</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f0/64/f0642c33-1b60-4ea5-acf9-419b03866dc0.JPG?v=1#slot-Welcome-Entry-Green-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeFreeWk1.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77013">
+          <name>L:H:G:S:WelcomeWeek2:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to TV &amp; Movies</visiblephrase>
+            <phrase>Welcome to TV and Movies</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Entertainment on Xbox</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/bf/2f/bf2f5974-24b5-4a6f-a3ed-b9e7a385cef8.JPG?v=1#slot-breakingbad-08-231x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeFreeWk2.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77014">
+          <name>L:H:G:S:WelcomeWeek3:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to Games</visiblephrase>
+            <phrase>Welcome to Games</phrase>
+            <phrase>Welcome</phrase>
+          </vui>
+          <description>Welcome to Games</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7e/3f/7e3fcc6f-63ab-43f1-b145-06c425592c92.JPG?v=1#slot-Welcome-Games-Halo-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeFreeWk3.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77015">
+          <name>L:H:G:S:WelcomeWeek4:XP:77000</name>
+          <vui>
+            <visiblephrase>Welcome to Rewards</visiblephrase>
+            <phrase>Welcome to Rewards</phrase>
+            <phrase>Welcome </phrase>
+          </vui>
+          <description>Try Gold for Free</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/2d/1e/2d1e6239-2f61-4b53-ab74-05288e613bf3.JPG?v=1#slot-Welcome-Gold-231x130-v2.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-welcomeFreeWk4.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot condition="@treatment.77000:77020 == 77011">
+          <name>L:H:G:S:WelcomeCtrl:XP:77000</name>
+          <vui>
+            <visiblephrase>Download Happy Wars</visiblephrase>
+            <phrase>Happy Wars</phrase>
+          </vui>
+          <description>Download Happy Wars</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/08/f8/08f88d89-8590-4830-a138-71e2caf7c6df.JPG?v=1#slot-HappyWars-231x130-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d80258410ae9;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:FIFA14Demo0923S</name>
+          <vui>
+            <visiblephrase>FIFA 14</visiblephrase>
+            <phrase>Fee Fah 14</phrase>
+            <phrase>Fee Fuh Fourteen</phrase>
+          </vui>
+          <description>Try FIFA 14 Free</description>
+          <rating>10</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f0/00/f0002983-566e-4bd4-b40f-28cbbd914614.JPG?v=1#slot-FIFA14-01-231x130.JPG</shallowimg>
+          <condition>
+            <condition>EcoLiveTier(Silver)</condition>
+            <condition>EcoGamePlayed(45410998)</condition>
+            <condition>!EcoGameOfferAvailable(1,454109C3,00080000,847DBF8505A4DEBDA4AAF2DD7DA1561505FAA126)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802454109c3;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:Battlefield3DotW0923G</name>
+          <vui>
+            <visiblephrase>Battlefield 3</visiblephrase>
+            <phrase>Battle Field 3</phrase>
+            <phrase>Battle Field Three</phrase>
+          </vui>
+          <description>Sale Ends Today</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/60/89/6089766a-1222-4a03-b3e7-edb8d5363a3a.JPG?v=1#slot-BF3Aftermath-231x130-v2.JPG</shallowimg>
+          <condition>
+            <condition>!EcoLiveTier(Silver)</condition>
+            <condition>EcoGamePlayed(45410950)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-DOTW.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:BDE:GTAVLaunch0923S</name>
+          <vui>
+            <visiblephrase>GTA V</visiblephrase>
+            <phrase>G T A Five</phrase>
+            <phrase>Gee Tee Ay Five</phrase>
+          </vui>
+          <description>GTA V: Fun in the Sun</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/9a/a9/9aa9cd84-0b3c-4028-b269-544a03934288.JPG?v=1#231x130.JPG</shallowimg>
+          <condition>EcoLiveTier(Silver)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/1b/5e/1b5ebfe6-c372-4cc5-a86e-d2f4de80a5f4.lzp?v=1#BDE_GTAV_EN-US_v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:G:BDE:GWGR6V0923G</name>
+          <vui>
+            <visiblephrase>Games with Gold</visiblephrase>
+            <phrase>Games with Gold</phrase>
+          </vui>
+          <description>Free Games with Gold</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ef/96/ef96eaeb-c53a-45a0-9bfa-a089bfb109f8.JPG?v=1#slot-Rainbow6Vegas-231x130-v1.JPG</shallowimg>
+          <condition>!EcoLiveTier(Silver)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-gwg-r6v.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:FB:TM:JusticeLeague0813</name>
+          <vui>
+            <visiblephrase>Justice League</visiblephrase>
+            <phrase>Justice League</phrase>
+            <phrase>Justice League</phrase>
+          </vui>
+          <description>Justice League</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/46/42/4642193f-1cf2-4b47-b94f-3688ff51bd62.JPG?v=1#slot-flashpointparadox-02-231x130-v2.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieDetailsPage?Id=83742ceb-7fc4-426e-9321-b720692f82a3</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:H:FAM:G:MLB2K13 0813</name>
+          <vui>
+            <visiblephrase>MLB 2K13</visiblephrase>
+            <phrase>MLB 2 K 13</phrase>
+            <phrase>MLB two k thirteen</phrase>
+          </vui>
+          <description>MLB 2K13 On Demand</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ac/07/ac07b240-96af-49b0-9c29-94ec9fe4d535.JPG?v=1#slot-MLB2K13-01-231x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802545408ab;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:TM:XV:ThisIsTheEnd0923</name>
+          <vui>
+            <visiblephrase>This Is the End</visiblephrase>
+            <phrase>This Is the End</phrase>
+            <phrase>This Is the End</phrase>
+          </vui>
+          <description>This Is the End + Bonus</description>
+          <rating>104</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/66/e5/66e53b4b-98a9-4d11-b722-9626c25c2242.JPG?v=1#slot-thisistheend-02-231x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieHubPage?Id=thisistheend</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:H:FB:G:MLB2K13 0813</name>
+          <vui>
+            <visiblephrase>MLB 2K13</visiblephrase>
+            <phrase>MLB 2 K 13</phrase>
+            <phrase>MLB two k thirteen</phrase>
+          </vui>
+          <description>MLB 2K13 On Demand</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ac/07/ac07b240-96af-49b0-9c29-94ec9fe4d535.JPG?v=1#slot-MLB2K13-01-231x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802545408ab;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:H:FAM:Apps:Nickelodian0813</name>
+          <vui>
+            <visiblephrase>Nick</visiblephrase>
+            <phrase>Nick</phrase>
+            <phrase>Nick</phrase>
+          </vui>
+          <description>Full Episodes</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/86/c8/86c84ff7-b776-4781-8b18-dd1f011070a4.JPG?v=1#slot-Nick-meta-01-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:523207DA</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Home Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1H;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Adult)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad Teen- Home Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1T;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Teen)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Home Freebird</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1F;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>EcoLiveTier(none)</condition>
+        </slot>
+        <slot>
+          <name>L:H:FB:Apps:Nickelodian0813</name>
+          <vui>
+            <visiblephrase>Nick</visiblephrase>
+            <phrase>Nick</phrase>
+            <phrase>Nick</phrase>
+          </vui>
+          <description>Full Episodes</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/86/c8/86c84ff7-b776-4781-8b18-dd1f011070a4.JPG?v=1#slot-Nick-meta-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:523207DA</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+    </channeldef>
+  </channel>
+  <channel>
+    <id>SOCIAL</id>
+    <description>social</description>
+    <definitionpath>channel://dash.social.lex/avatareditor:storelist:storefront</definitionpath>
+  </channel>
+  <channel>
+    <id>GAMES___LONDON</id>
+    <metadata>
+      <property>
+        <name>SearchContext</name>
+        <value>XboxGameItem</value>
+      </property>
+      <property>
+        <name>VuiContext</name>
+        <value>game</value>
+      </property>
+    </metadata>
+    <channeldef layouttemplate="epix://template3hd.xur">
+      <description>games</description>
+      <type>online</type>
+      <slotgroup>
+        <slot>
+          <name>My Games</name>
+          <vui>
+            <visiblephrase>%EvResStr(IDS_SLOT_GAMES_COLLECTION_VUI_DISPLAY_ALT)%</visiblephrase>
+            <phrase>%EvResStr(IDS_SLOT_GAMES_COLLECTION_VUI_PRON)%</phrase>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>My Games</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_controller.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gameslibrary:_RootTitle=my games;PackageType=1</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:GD:Family:Kinect Rush</name>
+          <description>Kinect Rush</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/6c/1c/6c1c66a3-d6f9-4c8a-8d4b-c602821cd59f.JPG?v=1#slot-KinectRush_263x197.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d8024d5309b6;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Foul Play</name>
+          <vui>
+            <visiblephrase>Foul Play</visiblephrase>
+            <phrase>Foul Play</phrase>
+          </vui>
+          <description>On The Boards: Foul Play</description>
+          <rating>20</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/6c/23/6c236bc5-a6f2-46bf-84ea-45a428981e3f.JPG?v=1#slot-FoulPlay-263x197-01.JPG</shallowimg>
+          <condition>EcoGamePlayed(584108B7)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d80258411409;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Battlefield 3 DOTW</name>
+          <vui>
+            <visiblephrase>Deal of the Week</visiblephrase>
+            <phrase>Deal of the Week</phrase>
+          </vui>
+          <description>Battlefield 3 DOTW</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fe/0c/fe0c2b04-b0fc-48a2-9a78-f155177270a7.JPG?v=1#slot-Battlefield3-263x197-v1.JPG</shallowimg>
+          <condition>EcoGamePlayed(45410950)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-DOTW.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Games with Gold 2</name>
+          <description>Games with Gold</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/1d/99/1d997017-194d-42d7-9e1d-10140e05da82.JPG?v=1#slot-Rainbow6Vegas-263x197-v1.JPG</shallowimg>
+          <condition>!EcoGamePlayed(555307D6)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-gwg-r6v.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Watchdogs</name>
+          <description>Watch_Dogs</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/bf/a6/bfa603cd-bce4-473e-a4bd-66981453cdc8.JPG?v=1#slot-watchdogs-263x197-01.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-watchdogs.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Fallback:Kinect Rush</name>
+          <vui>
+            <visiblephrase>Kinect Rush</visiblephrase>
+            <phrase>Kinect Rush</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Kinect Rush...</message>
+          </vui>
+          <description>Kinect Rush</description>
+          <rating>10</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/6c/1c/6c1c66a3-d6f9-4c8a-8d4b-c602821cd59f.JPG?v=1#slot-KinectRush_263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d8024d5309b6;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:GD:Family:Cars 2 GonD</name>
+          <vui>
+            <visiblephrase>Cars 2 </visiblephrase>
+            <phrase>Cars 2 </phrase>
+            <phrase>Cars 2 </phrase>
+          </vui>
+          <description>Go Racing with Cars 2 </description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fd/be/fdbe24eb-7965-4169-b13b-50ae7770fe78.JPG?v=1#slot-Cars2_263x197.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802425607fe;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Battlefield 4 Premium 2</name>
+          <vui>
+            <visiblephrase>Battlefield 4</visiblephrase>
+            <phrase>Battlefield 4</phrase>
+          </vui>
+          <description>Battlefield 4 Premium</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/98/bb/98bb1442-c573-4aa2-9de0-9a7f3da1585b.JPG?v=1#263x197-Theater-v1.JPG</shallowimg>
+          <condition>EcoGamePlayed(45410950)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-battlefield.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:GTA V 2</name>
+          <vui>
+            <visiblephrase>Grand Theft Auto V</visiblephrase>
+            <phrase>Grand Theft Auto 5</phrase>
+            <phrase>G T A 5</phrase>
+          </vui>
+          <description>Grand Theft Auto V</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/20/66/20663ef2-4596-4fb1-bc07-6954b04c3bc5.JPG?v=1#slot-grandtheftautoV-02-263x197.JPG</shallowimg>
+          <condition>EcoGamePlayed(545407F2)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToDashApp</cmd>
+            <param>http://epix.xbox.com/shaXam/0204/54/c3/54c31677-9a61-42c3-ab33-4c1d7020de8c.lzp?v=1#BDE_GTAV_EN-US_v2.lzp</param>
+            <param2>LUAXZP</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD: EA Sports 2</name>
+          <vui>
+            <visiblephrase>EA Sports</visiblephrase>
+            <phrase>EA Sports</phrase>
+          </vui>
+          <description>Hit the Ice in NHL 14</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7f/9a/7f9a8b7e-df11-45e9-bb0b-eb90badfaf12.JPG?v=1#slot-NHL-263x197-01.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-easports.xml</param>
+            <param2>489ce44d-b480-4a61-a0db-e9ef4104dd94</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Fallback:Cars 2 GonD</name>
+          <description>Go Racing with Cars 2 </description>
+          <rating>20</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fd/be/fdbe24eb-7965-4169-b13b-50ae7770fe78.JPG?v=1#slot-Cars2_263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802425607fe;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <definitionpath>slot://Dash.MP.ContentExplorer.lex/_ProviderSlotType=Reco;_SlotType=Reco;_SceneType=RecommendationLiveTile;_MethodName=Recommendations;_b=0;_f=5;_i=10;FirstPartyOnly=true;_ItemIndex=1;PageSize=20;DesiredMediaItemTypes=GameType;</definitionpath>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Browse Games</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching Browse Games...</message>
+          </vui>
+          <description>Browse Games</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_marketplace.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>DashGamesMP-London.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <definitionpath>slot://Dash.MP.ContentExplorer.lex/_ProviderSlotType=Reco;_SlotType=Reco;_SceneType=RecommendationLiveTile;_MethodName=Recommendations;_b=0;_f=5;_i=10;FirstPartyOnly=true;_ItemIndex=2;PageSize=20;DesiredMediaItemTypes=GameType;</definitionpath>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Games Search</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching Search Games...</message>
+          </vui>
+          <description>Search Games</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_search.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>search:filter=XboxGameItem</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:GD:Family:Sesame Street</name>
+          <description>Sesame Street</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/20/10/20101f9d-84f9-4f2a-8135-25ca264f4e33.JPG?v=1#slot-SesameStreet_263x197.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d8025752080c;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD: Saints Row IV 2</name>
+          <vui>
+            <visiblephrase>Saints Row IV</visiblephrase>
+            <phrase>Saints Row IV</phrase>
+            <phrase>Saints Row 4</phrase>
+          </vui>
+          <description>Saints Row IV</description>
+          <rating>40</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/d8/37/d837e5a5-ffd7-468e-a105-e12d87af4110.JPG?v=1#slot-SaintsRowIV-263x197-05.JPG</shallowimg>
+          <condition>!EcoGamePlayed(4B4D07F6)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-saintsrow.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD: WSOP</name>
+          <vui>
+            <visiblephrase>Full House Pro</visiblephrase>
+            <phrase>Full House Pro</phrase>
+          </vui>
+          <description>Play Poker Free with Gold</description>
+          <rating>30</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/9d/25/9d258e8e-4e09-43aa-b285-0ef3c4021311.JPG?v=1#slot-WSOPplayerart-263x197-01.JPG</shallowimg>
+          <condition>EcoGamePlayed(5841098D)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d802584112b9;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD: Minecraft Texture Pack</name>
+          <vui>
+            <visiblephrase>Minecraft</visiblephrase>
+            <phrase>Minecraft</phrase>
+          </vui>
+          <description>Mass Effect Mash-Up</description>
+          <rating>20</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/59/95/599571f6-ca4b-4755-8d5c-4335b9f37c39.JPG?v=1#slot-MinecraftMassEffectMashup-263x197-01.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>contentdetails:MediaId=66acd000-77fe-1000-9115-d802584111f7;ContentMediaId=62eddd25-3811-44c5-919a-f8702737ee47;ContentMediaTypeId=18</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:GD:Fallback:Sesame Street</name>
+          <description>Sesame Street</description>
+          <rating>10</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/20/10/20101f9d-84f9-4f2a-8135-25ca264f4e33.JPG?v=1#slot-SesameStreet_263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d8025752080c;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>ABG: Family Fallback</name>
+          <vui>
+            <responsetype>ImplicitYes</responsetype>
+          </vui>
+          <description>Kinectimals</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/16/2e/162eb112-005e-468a-b01e-fcc083a3218f.JPG?v=1#slot-Kinectimals-263x197-v1.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d8024d5308b3;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Games Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>ADVERTISEMENT</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1G;SlotWidth=263;SlotHeight=197;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Adult)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad Teen- Games Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1T;SlotWidth=263;SlotHeight=197;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Teen)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Games Freebird</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1F;SlotWidth=263;SlotHeight=197;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>EcoLiveTier(none)</condition>
+        </slot>
+        <slot>
+          <name>ABG: Conditional Fallback</name>
+          <vui>
+            <responsetype>ImplicitYes</responsetype>
+          </vui>
+          <description>Kinectimals</description>
+          <rating>10</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/16/2e/162eb112-005e-468a-b01e-fcc083a3218f.JPG?v=1#slot-Kinectimals-263x197-v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gamedetails:66acd000-77fe-1000-9115-d8024d5308b3;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Recommendation 3</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching All Recommendations...</message>
+          </vui>
+          <description>All Recommendations</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/1e/52/1e52c1da-8e3c-4cb9-b6d4-2e46f0b768e4.PNG?v=1#slot_231x130_recommend_games.PNG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToPamApp</cmd>
+            <param>BuiltIn.hub.xzp</param>
+            <param2>Provider=Dash.MP.ContentExplorer.lex;Args="_Context=TitleList;_RootTitle=my game recommendations;_MethodName=Recommendations;_b=0.5;_f=5;_i=10;DesiredMediaItemTypes=GameType;_NormalizeSlotVui=false;_PageSize=20;FirstPartyOnly=true;_SlotType=Reco;_SlotCount=20;_SceneType=RecommendationLive_Hub;"</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+    </channeldef>
+  </channel>
+  <channel>
+    <id>TV___MOVIES</id>
+    <metadata>
+      <property>
+        <name>SearchContext</name>
+        <value>XboxVideoItem</value>
+      </property>
+      <property>
+        <name>VuiContext</name>
+        <value>video</value>
+      </property>
+    </metadata>
+    <channeldef layouttemplate="epix://templatestore2hd.xur">
+      <description>tv &amp; movies</description>
+      <type>online</type>
+      <slotgroup>
+        <slot>
+          <name>My Video Apps</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching My Video Apps...</message>
+          </vui>
+          <description>My Video Apps</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_apps.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>gameslibrary:_RootTitle=my video apps;PackageType=2;Category=12;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Zune system tile</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>Xbox Video</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_zunelogo.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:TM:XV:FAM:LegendKorra0917</name>
+          <vui>
+            <visiblephrase>Legend of Korra</visiblephrase>
+            <phrase>Legend of Korra</phrase>
+            <phrase>lejend of korah</phrase>
+          </vui>
+          <description>New Season of Legend of Korra</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/01/db/01dbe8a4-2a8a-430c-b614-754b9046bf80.JPG?v=1#slot-LegendofKorra-03-352x264.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:TVSeriesDetailsPage?Id=dce68216-91b2-4c40-a59f-ea32c55449ce</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:BDE:AgentsSHIELD0922</name>
+          <vui>
+            <visiblephrase>Agents of S.H.I.E.L.D.</visiblephrase>
+            <phrase>Agents of shield</phrase>
+            <phrase>ajents of sheeld</phrase>
+          </vui>
+          <description>Marvel's Agents of S.H.I.E.L.D.</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/ed/96/ed96bb57-b5a2-443c-94b2-8fa342b9aff0.JPG?v=1#slot-AgentsofSHIELD-352x264-01.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-TM-AgentsofSHIELD.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:XV:FB:LegendKorra0917</name>
+          <vui>
+            <visiblephrase>Legend of Korra</visiblephrase>
+            <phrase>Legend of Korra</phrase>
+            <phrase>lejend of korah</phrase>
+          </vui>
+          <description>New Season of Legend of Korra</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/01/db/01dbe8a4-2a8a-430c-b614-754b9046bf80.JPG?v=1#slot-LegendofKorra-03-352x264.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:TVSeriesDetailsPage?Id=dce68216-91b2-4c40-a59f-ea32c55449ce</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <definitionpath>slot://Dash.MP.ContentExplorer.lex/_ProviderSlotType=Reco;_SlotType=Reco;_SceneType=RecommendationLiveTile;_MethodName=Recommendations;_b=0;_f=5;_i=10;FirstPartyOnly=false;_ItemIndex=1;PageSize=5;DesiredMediaItemTypes=MovieType.TVType;</definitionpath>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Video Store System tile</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Browse TV &amp; Movies</message>
+          </vui>
+          <description>Browse TV &amp; Movies</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_marketplace.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>DashVideoMP-London.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:TV:AT&amp;T U-verse Conditional</name>
+          <vui>
+            <visiblephrase>U-verse</visiblephrase>
+            <phrase>U verse</phrase>
+            <phrase>A tee n tee</phrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7a/88/7a8895c2-ede8-4dc3-866d-2cda4a64df44.JPG?v=1#174x130_At%26t.JPG</shallowimg>
+          <condition>EcoMediaroomEnabled()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToMediaRoom</cmd>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:Xfinity Conditional</name>
+          <vui>
+            <visiblephrase>xfinity</visiblephrase>
+            <phrase>X fin ee tea</phrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/88/93/8893a4f0-9225-4362-8827-415d4774b4c2.JPG?v=1#174x130_xfinity.JPG</shallowimg>
+          <condition>ecoLiveTVProvider(473007D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:473007D1{00000001-0000-4000-8000-0000473007d1}</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:FiOS Conditional</name>
+          <vui>
+            <visiblephrase>Verizon</visiblephrase>
+            <phrase>Vur Rise in</phrase>
+            <phrase>Fy Oh s</phrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/d1/55/d1557eea-46b9-4f05-932d-fc8017bb1d20.JPG?v=2#197x148_VerizonFiOS.JPG</shallowimg>
+          <condition>ecoLiveTVProvider(314107D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:314107D1{000000001-0000-4000-8000-0000314107d1}</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:AT&amp;T_Orapa_Conditional</name>
+          <vui>
+            <visiblephrase>U-verse</visiblephrase>
+            <phrase>U verse</phrase>
+            <phrase>A tee and tee</phrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/7a/88/7a8895c2-ede8-4dc3-866d-2cda4a64df44.JPG?v=1#174x130_At%26t.JPG</shallowimg>
+          <condition>ecoLiveTVProvider(584307DB)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:584307DB{00000001-0000-4000-8000-0000584307db}</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:TWC Conditional</name>
+          <vui>
+            <visiblephrase>TWC TV</visiblephrase>
+            <phrase>Time Warner</phrase>
+            <phrase>TWC</phrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/e9/6e/e96ea8d1-8f17-467b-8b49-d4934209c792.JPG?v=1#slot-TWC-01-174x130.JPG</shallowimg>
+          <condition>ecoLiveTVProvider(583307D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:583307D1{00000001-0000-4000-8000-0000583307d1}</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:App Uninstalled</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>Get Your TV App</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_tv.png</param>
+          </deepasset>
+          <condition>!ecoLiveTVProvider()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appsmp:_RootTitle=tv apps;_Param=[SubscriptionLevel];_MethodName=Browse;_PageSize=25;orderBy=ReleaseDate;desiredMediaItemTypes=XboxApp;Genre=TV;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:App Uninstalled 2nd</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>Get Your TV App</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_tv.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appsmp:_RootTitle=tv apps;_Param=[SubscriptionLevel];_MethodName=Browse;_PageSize=25;orderBy=ReleaseDate;desiredMediaItemTypes=XboxApp;Genre=TV;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TV:No TV Provider</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <metadata>
+            <property>
+              <name>gradient</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>Get Video Apps</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_video.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appsmp:_RootTitle=video apps;_Param=[SubscriptionLevel];_MethodName=Browse;_PageSize=25;orderBy=ReleaseDate;desiredMediaItemTypes=XboxApp;Genre=Video;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <definitionpath>slot://Dash.MP.ContentExplorer.lex/_ProviderSlotType=Reco;_SlotType=Reco;_SceneType=RecommendationLiveTile;_MethodName=Recommendations;_b=0;_f=5;_i=10;FirstPartyOnly=false;_ItemIndex=2;PageSize=5;DesiredMediaItemTypes=MovieType.TVType;</definitionpath>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Search Videos System Tile</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching Search TV &amp; Movies...</message>
+          </vui>
+          <description>Search TV &amp; Movies</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_search.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>search:filter=XboxVideoItem</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:TM:XV:FAM:WendellVinnie0903</name>
+          <vui>
+            <visiblephrase>Wendell &amp; Vinnie</visiblephrase>
+            <phrase>Wendell</phrase>
+            <phrase>Wendool</phrase>
+          </vui>
+          <description>Wendell &amp; Vinnie</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/e0/fce0819c-7608-40b6-9b4e-b2d6e7f428b0.JPG?v=1#slot-WendellAndVinnie-01-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:TVSeriesDetailsPage?Id=d1eef607-7453-4254-b52d-89ca69cb86ca</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L TV: ABG Paid Ad</name>
+          <metadata>
+            <property>
+              <name>Advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1V;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Adult)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad Teen- Video Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1T;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Teen)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - TV Freebird</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1F;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>EcoLiveTier(none)</condition>
+        </slot>
+        <slot>
+          <name>L:TM:XV:FB:WendellVinnie0903</name>
+          <vui>
+            <visiblephrase>Wendell &amp; Vinnie</visiblephrase>
+            <phrase>Wendell</phrase>
+            <phrase>Wendool</phrase>
+          </vui>
+          <description>Wendell &amp; Vinnie</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/e0/fce0819c-7608-40b6-9b4e-b2d6e7f428b0.JPG?v=1#slot-WendellAndVinnie-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:TVSeriesDetailsPage?Id=d1eef607-7453-4254-b52d-89ca69cb86ca</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:TM:XV:FAM:Oz0917</name>
+          <vui>
+            <visiblephrase>Oz the Great &amp; Powerful</visiblephrase>
+            <phrase>Oz the Great &amp; Powerful</phrase>
+            <phrase>oz the greyt and pouerfuhl</phrase>
+          </vui>
+          <description>Watch Oz Today</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/b1/39/b139afb5-576b-4bc5-a075-61e070d95509.JPG?v=1#slot-ozthegreatandpowerful-03-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieHubPage?Id=ozthegreatandpowerful</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:XV:TheCroods0922</name>
+          <vui>
+            <visiblephrase>The Croods</visiblephrase>
+            <phrase>The Croods</phrase>
+            <phrase>The kroods</phrase>
+          </vui>
+          <description>The Croods</description>
+          <rating>102</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/e4/b4/e4b4ca74-d674-48a6-81d7-f582ce353ca6.JPG?v=1#slot-TheCroods-03-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieDetailsPage?Id=FEF653E7-881F-4760-BB57-79410080D734</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:XV:FB:Oz0917</name>
+          <vui>
+            <visiblephrase>Oz the Great &amp; Powerful</visiblephrase>
+            <phrase>Oz the Great &amp; Powerful</phrase>
+            <phrase>oz the greyt and pouerfuhl</phrase>
+          </vui>
+          <description>Watch Oz Today</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/b1/39/b139afb5-576b-4bc5-a075-61e070d95509.JPG?v=1#slot-ozthegreatandpowerful-03-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:MovieHubPage?Id=ozthegreatandpowerful</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:TM:XF:FAM:SanjayCraig0920</name>
+          <vui>
+            <visiblephrase>Sanjay and Craig</visiblephrase>
+            <phrase>Sanjay and Craig</phrase>
+            <phrase>sanjey and kreyg</phrase>
+          </vui>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/1a/d6/1ad65823-5939-4fba-86f9-a454c490c5cc.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/62/a0/62a07a0a-1c6f-410d-bc14-827031932813.JPG?v=1#slot-XF-SanjayAndCraig-174x130-01.JPG;Title=Sanjay &amp; Craig;Provider=On XFINITY</param>
+          </deepasset>
+          <condition>
+            <condition>EcoIsFamily()</condition>
+            <condition>ecoLiveTVProvider(473007D1)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:473007D1:SERIES,6309627551391767112</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:TWC:FAM:RegularShow0920</name>
+          <vui>
+            <visiblephrase>Cartoon Network</visiblephrase>
+            <phrase>Cartoon Network</phrase>
+            <phrase>kartoon netwerk</phrase>
+          </vui>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/1a/d6/1ad65823-5939-4fba-86f9-a454c490c5cc.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/4e/53/4e536732-8997-42d7-b66e-01a9330e1356.JPG?v=1#slot-RegularShow-174x130-02.JPG;Title=Cartoon Network;Provider=On TWC</param>
+          </deepasset>
+          <condition>
+            <condition>EcoIsFamily()</condition>
+            <condition>ecoLiveTVProvider(583307D1)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:583307D1:&lt;ApplicationSpecificData&gt;&lt;LaunchData&gt;&lt;Uri&gt;Player&lt;/Uri&gt;&lt;TmsId&gt;60048&lt;/TmsId&gt;&lt;/LaunchData&gt;&lt;/ApplicationSpecificData&gt;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:XV:FAM:WildKratts0917</name>
+          <vui>
+            <visiblephrase>Wild Kratts</visiblephrase>
+            <phrase>Wild Kratts</phrase>
+            <phrase>wahyld krats</phrase>
+          </vui>
+          <description>The Wild Kratts</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/21/a7/21a7d702-365b-46b2-9238-cda42b424358.JPG?v=1#slot-WildKratts-01-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:TVSeriesDetailsPage?Id=ac8eddf7-6d4c-4613-9550-51f0ec41b1a6</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:XF:Dexter0920</name>
+          <vui>
+            <visiblephrase>Dexter</visiblephrase>
+            <phrase>Dexter</phrase>
+            <phrase>dekster</phrase>
+          </vui>
+          <rating>307</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/1a/d6/1ad65823-5939-4fba-86f9-a454c490c5cc.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/81/d1/81d1f813-a226-4ec3-b7cd-eae394b42bc2.JPG?v=1#slot-XF-Dexter-174x130-01.JPG;Title=Watch Dexter;Provider=On XFINITY</param>
+          </deepasset>
+          <condition>ecoLiveTVProvider(473007D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:473007D1:SERIES,5439073586824568112</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:TWC:HellonWheels0920</name>
+          <vui>
+            <visiblephrase>AMC</visiblephrase>
+            <phrase>A M C</phrase>
+            <phrase>eh em see</phrase>
+          </vui>
+          <rating>306</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/1a/d6/1ad65823-5939-4fba-86f9-a454c490c5cc.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/87/98/8798f535-ad99-4227-b138-f0a1cef80a2b.JPG?v=1#slot-HellOnWheels-01-174x130.JPG;Title=Watch AMC;Provider=On TWC</param>
+          </deepasset>
+          <condition>ecoLiveTVProvider(583307D1)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:583307D1:&lt;ApplicationSpecificData&gt;&lt;LaunchData&gt;&lt;Uri&gt;Player&lt;/Uri&gt;&lt;TmsId&gt;59337&lt;/TmsId&gt;&lt;/LaunchData&gt;&lt;/ApplicationSpecificData&gt;</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:AI:HBO:Boardwalk0922</name>
+          <vui>
+            <visiblephrase>Boardwalk</visiblephrase>
+            <phrase>Boardwalk</phrase>
+            <phrase>bohrdwawk</phrase>
+          </vui>
+          <rating>307</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/1a/d6/1ad65823-5939-4fba-86f9-a454c490c5cc.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/8d/a4/8da45aab-e93f-4219-a242-1ad975258cc8.JPG?v=1#slot-HBO-Boardwalk-174x130-02.JPG;Title=New Boardwalk;Provider=On HBO GO</param>
+          </deepasset>
+          <condition>EcoGameOfferAvailable(1,444607D1,00007000,184833B5A2D4133CF3C6B49341F34C7644)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:444607D1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:CC:BestofStandUp0920</name>
+          <vui>
+            <visiblephrase>Kevin Hart</visiblephrase>
+            <phrase>Kevin Hart</phrase>
+            <phrase>Kevin Hart</phrase>
+          </vui>
+          <rating>-17957139</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/1a/d6/1ad65823-5939-4fba-86f9-a454c490c5cc.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/5d/b1/5db1f63e-6861-49c7-8c70-2b59767c1211.JPG?v=1#slot-CC-BestofStandUp-KevinHart-174x130-02.JPG;Title=Kevin Hart;Provider=Comedy Central</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:523207DC:{"type": "playlist","action": "link","playlist": {"id": "3af74759-1977-4084-8ab3-be07a8c0eeba","uri": "mgid:arc:playlist:comedycentral.com: 3af74759-1977-4084-8ab3-be07a8c0eeba"}}</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:TM:XV:FB:WildKratts0917</name>
+          <vui>
+            <visiblephrase>Wild Kratts</visiblephrase>
+            <phrase>Wild Kratts</phrase>
+            <phrase>wahyld krats</phrase>
+          </vui>
+          <description>The Wild Kratts</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/21/a7/21a7d702-365b-46b2-9238-cda42b424358.JPG?v=1#slot-WildKratts-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:TVSeriesDetailsPage?Id=ac8eddf7-6d4c-4613-9550-51f0ec41b1a6</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>TV &amp; Movies Reco 3</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching All Recommendations...</message>
+          </vui>
+          <description>All Recommendations</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/d2/15/d2155a80-4e56-40ce-9a3a-cc7166135505.PNG?v=1#recomended.PNG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToPamApp</cmd>
+            <param>BuiltIn.hub.xzp</param>
+            <param2>Provider=Dash.MP.ContentExplorer.lex;Args="_Context=TitleList;_RootTitle=my tv &amp; movie recommendations;_MethodName=Recommendations;_b=0.5;_f=5;_i=10;DesiredMediaItemTypes=MovieType.TVType;_NormalizeSlotVui=false;_PageSize=20;FirstPartyOnly=false;_SlotType=Reco;_SlotCount=20;_SceneType=RecommendationLive_Hub;"</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+    </channeldef>
+  </channel>
+  <channel>
+    <id>MUSIC___LONDON</id>
+    <metadata>
+      <property>
+        <name>SearchContext</name>
+        <value>XboxMusicItem</value>
+      </property>
+      <property>
+        <name>VuiContext</name>
+        <value>music</value>
+      </property>
+    </metadata>
+    <channeldef layouttemplate="epix://templatestore4hd.xur">
+      <description>music</description>
+      <type>online</type>
+      <slotgroup>
+        <slot>
+          <name>My Music Apps</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>My Music Apps</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>Common://ico_64x_apps.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>applibrary:_RootTitle=my music apps;PackageType=2;Category=2;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:FAM:Smurfs2:8/6</name>
+          <vui>
+            <visiblephrase>The Smurfs</visiblephrase>
+            <phrase>The Smurfs</phrase>
+            <phrase> the Smerfs</phrase>
+          </vui>
+          <description>Smurfs 2 Soundtrack</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/8a/61/8a61051c-ac02-4cde-881f-053faa98016f.JPG?v=1#slot-Smurfs2-1-263x197.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=a5cdce07-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:VV:EddieMurphy:9/20</name>
+          <vui>
+            <visiblephrase>Eddie Murphy ft. Snoop Lion</visiblephrase>
+            <phrase>Eddie Murphy</phrase>
+            <phrase>Snoop Lion</phrase>
+          </vui>
+          <rating>-17957139</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/48/97/4897259b-4124-4012-9d05-471840600d58.lzp?v=1#Animated+Slot+263x197.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/17/0a/170afe94-835c-4889-b5a0-632a11fc2e4b.JPG?v=1#slot-RedLight-VEVO-02-263x197.JPG;Title=Eddie Murphy ft. Snoop Lion;Provider=On VEVO</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:304E07D1:VIDEO_USUYG1034476</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:FB:Smurfs2:8/6</name>
+          <vui>
+            <visiblephrase>The Smurfs</visiblephrase>
+            <phrase>The Smurfs</phrase>
+            <phrase>The Smerfs</phrase>
+          </vui>
+          <description>Smurfs 2 Sountrack</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/8a/61/8a61051c-ac02-4cde-881f-053faa98016f.JPG?v=1#slot-Smurfs2-1-263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=a5cdce07-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:FAM:OneDirection:8/6</name>
+          <vui>
+            <visiblephrase>One Direction</visiblephrase>
+            <phrase>One Direction</phrase>
+            <phrase>One Direction</phrase>
+          </vui>
+          <description>One Direction</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/c3/3b/c33bdd74-74ee-4824-b948-6c3d6dab0b4d.JPG?v=1#onedirection-01-263x197+(1).JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=e2a37807-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:LinkinParkBDE:9/22</name>
+          <vui>
+            <visiblephrase>New Linkin Park Single</visiblephrase>
+            <phrase>Linkin Park Single</phrase>
+            <phrase>Linkin Park</phrase>
+          </vui>
+          <description>New Linkin Park Single</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/be/5f/be5fc8ff-83c1-4c54-88fa-7ef5722b42dd.JPG?v=1#LinkinPark_ALTNC_NowPlaying_263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-linkinpark.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:FB:OneDirection:9/6</name>
+          <vui>
+            <visiblephrase>One Direction</visiblephrase>
+            <phrase>One Direction</phrase>
+            <phrase>One Direction</phrase>
+          </vui>
+          <description>One Direction</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/c3/3b/c33bdd74-74ee-4824-b948-6c3d6dab0b4d.JPG?v=1#onedirection-01-263x197+(1).JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=e2a37807-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:FAM:MonstersU:9/6</name>
+          <vui>
+            <visiblephrase>Monsters U</visiblephrase>
+            <phrase>Monsters</phrase>
+            <phrase>Monsters University</phrase>
+          </vui>
+          <description>Monsters U</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/df/27/df2702a3-1a2a-49fe-8100-f79a875a0eec.JPG?v=1#slot-monstersuniversity-01-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=2270c507-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:X:AviciiTRUE:9/20</name>
+          <vui>
+            <visiblephrase>Avicii - TRUE</visiblephrase>
+            <phrase>Aveechi</phrase>
+            <phrase>Aveechee</phrase>
+          </vui>
+          <description>Avicii - TRUE</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/59/1a/591a4c0c-07cc-4675-a97f-4ffeb6aa49e6.JPG?v=1#slot-Avicii-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=095de007-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:FB:MonstersU:9/6</name>
+          <vui>
+            <visiblephrase>Monsters U</visiblephrase>
+            <phrase>Monsters University</phrase>
+            <phrase>Monsters</phrase>
+          </vui>
+          <description>Monsters U</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/df/27/df2702a3-1a2a-49fe-8100-f79a875a0eec.JPG?v=1#slot-monstersuniversity-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=2270c507-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Xbox Music</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <metadata>
+            <property>
+              <name>Gradient</name>
+              <value>No</value>
+            </property>
+          </metadata>
+          <description>Xbox Music</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_zunelogo.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:5848085B:MusicHomePage</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:FAM:PitchPerfect:8/6</name>
+          <vui>
+            <visiblephrase>Pitch Perfect</visiblephrase>
+            <phrase>pich purfikt</phrase>
+            <phrase>pich perfekt</phrase>
+          </vui>
+          <description>Pitch Perfect</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/5c/96/5c967f0e-3848-4029-81b1-2252274ad630.JPG?v=1#slot-PitchPerfect-02-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=f3b06307-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:DevilWearsPrada:9/20</name>
+          <vui>
+            <visiblephrase>New Hardcore</visiblephrase>
+            <phrase>New Hardcore</phrase>
+            <phrase>Devil Wears Prada</phrase>
+          </vui>
+          <description>New Hardcore</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/d2/f8/d2f86a2a-b3c3-47a4-8a42-ca0481490c8b.JPG?v=1#slot-DevilWearsPrada-08-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=8a1be007-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:FB:PitchPerfect:8/6</name>
+          <vui>
+            <visiblephrase>Pitch Perfect</visiblephrase>
+            <phrase>pich purfikt</phrase>
+            <phrase>pich perfekt</phrase>
+          </vui>
+          <description>Pitch Perfect</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/5c/96/5c967f0e-3848-4029-81b1-2252274ad630.JPG?v=1#slot-PitchPerfect-02-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=f3b06307-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Music Search</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+            <message>Launching Search Music...</message>
+          </vui>
+          <description>Search Music</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_search.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>search:filter=XboxMusicItem</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:PL:FAM:KidzBop24:8/6</name>
+          <vui>
+            <visiblephrase>Kidz Bop 24</visiblephrase>
+            <phrase>Kidz Bop twentee fohr</phrase>
+            <phrase>kidz bop twuhnee fawr</phrase>
+          </vui>
+          <description>Kidz Bop 24</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/26/fc26979c-53b2-4239-850e-d7a845853304.JPG?v=1#slot-kidzbopkids-14-263x197.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=51b4c807-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:AI:UV/TM:ZonaLatiV5</name>
+          <description>Hispanic Heritage Month</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/29/47/2947afcc-9270-47bc-82a0-f9b7332a5356.JPG?v=1#slot-HispanicHeritageMegamix-Rhapsody-263x197-v1.JPG</shallowimg>
+          <condition>EcoGameOfferAvailable(1,564A07D1,00007000,2E0D1E066C58585B751E734BFE4420ED56)</condition>
+          <condition>EcoGameOfferAvailable(1,594C07D2,00007000,FC8D8B3555919358412A17743C87FDAC59)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>exl-zonalatina.xml</param>
+            <param2>61773114-c1de-4738-b085-322160b1497c</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:MMGSelfMadeVol.3:9/20</name>
+          <vui>
+            <visiblephrase>New Supergroup Mixtape</visiblephrase>
+            <phrase>Rick Ross</phrase>
+            <phrase>Mix tape</phrase>
+          </vui>
+          <description>New Supergroup Mixtape</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/f2/73/f2737186-570d-4818-ab90-d4d5984346e4.JPG?v=1#slot-RickRoss-07-263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=7f3de107-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:PL:FB:KidzBop24:8/6</name>
+          <vui>
+            <visiblephrase>Kidz Bop 24</visiblephrase>
+            <phrase>Kidz Bop twentee fohr</phrase>
+            <phrase>kidz bop twuhnee fawr</phrase>
+          </vui>
+          <description>Kidz Bop 24</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/26/fc26979c-53b2-4239-850e-d7a845853304.JPG?v=1#slot-kidzbopkids-14-263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=51b4c807-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:FAM:PrincessFairyT:6/4</name>
+          <vui>
+            <visiblephrase>Disney: Princess Songs</visiblephrase>
+            <phrase>Disney: Princess Songs</phrase>
+            <phrase>Disney: Princess Songs</phrase>
+          </vui>
+          <description>Disney: Princess Songs</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/20/99/2099206d-4612-49ae-b1e6-1aed0bc67a72.JPG?v=1#slot-FairyTaleSongs-01-263x197.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=8caef006-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Music Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>ADVERTISEMENT</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1M;SlotWidth=263;SlotHeight=197;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Adult)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad Teen- Music Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1T;SlotWidth=263;SlotHeight=197;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Teen)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Music Freebird</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1F;SlotWidth=263;SlotHeight=197;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>EcoLiveTier(none)</condition>
+        </slot>
+        <slot>
+          <name>L:M:A:X:FB:PrincessFairyTa:6/4</name>
+          <vui>
+            <visiblephrase>Disney: Princess Songs</visiblephrase>
+            <phrase>Disney: Princess Songs</phrase>
+            <phrase>Disney: Princess Songs</phrase>
+          </vui>
+          <description>Disney: Princess Songs</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/20/99/2099206d-4612-49ae-b1e6-1aed0bc67a72.JPG?v=1#slot-FairyTaleSongs-01-263x197.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=8caef006-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:M:A:X:FAM:WreckItRalph:8/6</name>
+          <vui>
+            <visiblephrase>Wreck-It Ralph</visiblephrase>
+            <phrase>Wreck It Ralph</phrase>
+            <phrase>rek it ralf</phrase>
+          </vui>
+          <description>Wreck-It Ralph</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/24/5f/245fb4b5-797e-42c0-8ae7-87e457d3337d.JPG?v=1#slot-WreckItRalph-01-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=59b67107-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:YT:ImagineDragons:9/20</name>
+          <vui>
+            <visiblephrase>Imagine Dragons</visiblephrase>
+            <phrase>Imagine Dragons</phrase>
+            <phrase>Dragons</phrase>
+          </vui>
+          <rating>-17957139</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/7a/1c/7a1c6a8f-e8aa-4a74-859d-da4b4204724b.lzp?v=1#Animated+Slot+174x130.lzp</path>
+            <param>Asset=http://epix.xbox.com/shaXam/0201/bd/a6/bda61a77-1380-4804-9496-9c525042e940.JPG?v=1#slot-Radioactive-YouTube-1-174x130.JPG;Title=Imagine Dragons;Provider=On YouTube</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:423607D1:/watch?v=ktvTqknDobU</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>L:M:A:X:FB:WreckItRalph:8/6</name>
+          <vui>
+            <visiblephrase>Wreck-It Ralph</visiblephrase>
+            <phrase>Wreck It Ralph</phrase>
+            <phrase>rek it ralf</phrase>
+          </vui>
+          <description>Wreck-It Ralph</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/24/5f/245fb4b5-797e-42c0-8ae7-87e457d3337d.JPG?v=1#slot-WreckItRalph-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>zune:AlbumDetailsPage?AlbumId=59b67107-0100-11db-89ca-0019b92a3933</param>
+            <param2>silver</param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+    </channeldef>
+  </channel>
+  <channel>
+    <id>APPS___LONDON</id>
+    <metadata>
+      <property>
+        <name>SearchContext</name>
+        <value>XboxAppItem</value>
+      </property>
+      <property>
+        <name>VuiContext</name>
+        <value>app</value>
+      </property>
+    </metadata>
+    <channeldef layouttemplate="epix://templatestore13hd.xur">
+      <description>apps</description>
+      <type>online</type>
+      <slotgroup>
+        <slot>
+          <name>L:A: MyApps</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>My Apps</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_apps.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>applibrary:_RootTitle=my apps;</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:I: HuluPlus 0901</name>
+          <vui>
+            <visiblephrase>Hulu Plus</visiblephrase>
+            <phrase>Hulu Plus</phrase>
+            <phrase>Hooloo Plus</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Hulu Plus...</message>
+          </vui>
+          <description>New Easy Signup</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/0b/80/0b80bc45-b360-4cb0-ad2e-4ff4e373ed9a.JPG?v=3#174x130_HuluPlus_meta.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:304807D1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:U: HuluPlus 0901</name>
+          <vui>
+            <visiblephrase>Hulu Plus</visiblephrase>
+            <phrase>Hulu Plus</phrase>
+            <phrase>Hooloo Plus</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Hulu Plus...</message>
+          </vui>
+          <description>New Easy Signup</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/0b/80/0b80bc45-b360-4cb0-ad2e-4ff4e373ed9a.JPG?v=3#174x130_HuluPlus_meta.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,304807D1,00007000,3A24A5B38EA811878B0D08033583627030)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802304807d1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:U: ESPN 0920</name>
+          <vui>
+            <visiblephrase>ESPN</visiblephrase>
+            <phrase>ESPN</phrase>
+            <phrase>ee ess pee en</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching ESPN...</message>
+          </vui>
+          <description>Football Highlights, Clips &amp; More</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/65/5c/655c2157-3711-4327-91f7-f3735e86c1b2.JPG?v=1#352x264_ESPN_meta.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,5848086A,00007000,152118D8516882AECA9C290948CB392558)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d8025848086a</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: ESPN 0920</name>
+          <vui>
+            <visiblephrase>ESPN</visiblephrase>
+            <phrase>ESPN</phrase>
+            <phrase>ee es pee en</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching ESPN...</message>
+          </vui>
+          <description>Football Highlights, Clips &amp; More</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/65/5c/655c2157-3711-4327-91f7-f3735e86c1b2.JPG?v=1#352x264_ESPN_meta.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:5848086A</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:U: Sesame Street 0813</name>
+          <vui>
+            <visiblephrase>Sesame Street TV</visiblephrase>
+            <phrase>sesamee street tee vee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Sesame Street...</message>
+          </vui>
+          <description>Watch and Play</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/8d/49/8d4950b5-b1cb-4a84-a7b8-22e9a20c7a38.JPG?v=1#174x130_SesameStreet-meta.JPG</shallowimg>
+          <condition>
+            <condition>!EcoGameOfferAvailable(1,4D530A2D,00007000,F792F022E84A29AF293027B30B94F2E14D)</condition>
+            <condition>EcoIsFamily()</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d8024d530a2d</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Sesame Street 0813</name>
+          <vui>
+            <visiblephrase>Sesame Street TV</visiblephrase>
+            <phrase>sesamee street tee vee</phrase>
+            <phrase>sesamee street</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Sesame Street TV...</message>
+          </vui>
+          <description>Watch and Play</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/8d/49/8d4950b5-b1cb-4a84-a7b8-22e9a20c7a38.JPG?v=1#174x130_SesameStreet-meta.JPG</shallowimg>
+          <condition>
+            <condition>EcoGameOfferAvailable(1,4D530A2D,00007000,F792F022E84A29AF293027B30B94F2E14D)</condition>
+            <condition>EcoIsFamily()</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:4D530A2D</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:FB: Sesame Street 0813</name>
+          <vui>
+            <visiblephrase>Sesame Street TV</visiblephrase>
+            <phrase>sesamee street tee vee</phrase>
+            <phrase>sesamee street</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Sesame Street TV...</message>
+          </vui>
+          <description>Watch and Play</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/8d/49/8d4950b5-b1cb-4a84-a7b8-22e9a20c7a38.JPG?v=1#174x130_SesameStreet-meta.JPG</shallowimg>
+          <condition>
+            <condition>EcoLiveTier(none)</condition>
+            <condition>EcoIsFamily()</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d8024d530a2d</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:U: Internet Explorer 0813</name>
+          <vui>
+            <visiblephrase>Internet Explorer</visiblephrase>
+            <phrase>Internet Explorer</phrase>
+            <phrase>eye eee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Internet Explorer...</message>
+          </vui>
+          <description>Internet Explorer</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/bd/19/bd1985c3-532c-4e02-bd77-25ee551b9c92.JPG?v=1#174x130_IEX_new_meta_v1.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,58480880,00007000,C8E68A0A5BEA21EBDF994B2E312573F458)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d80258480880</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Internet Explorer 0813</name>
+          <vui>
+            <visiblephrase>Internet Explorer</visiblephrase>
+            <phrase>Internet Explorer</phrase>
+            <phrase>eye ee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Internet Explorer...</message>
+          </vui>
+          <description>Internet Explorer</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/bd/19/bd1985c3-532c-4e02-bd77-25ee551b9c92.JPG?v=1#174x130_IEX_new_meta_v1.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:58480880</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:NC: Sesame Street 0813</name>
+          <vui>
+            <visiblephrase>Sesame Street TV</visiblephrase>
+            <phrase>sesamee street tee vee</phrase>
+            <phrase>sesame street</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Sesame Street TV...</message>
+          </vui>
+          <description>Watch and Play</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/8d/49/8d4950b5-b1cb-4a84-a7b8-22e9a20c7a38.JPG?v=1#174x130_SesameStreet-meta.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d8024d530a2d</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:A: BrowseApps</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>Browse Apps</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_marketplace.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToEpixManifest</cmd>
+            <param>DashAppsMP.xml</param>
+            <param2>
+            </param2>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:U: Netflix 0205</name>
+          <vui>
+            <visiblephrase>Netflix</visiblephrase>
+            <phrase>Net Flix</phrase>
+            <phrase>Net Flicks</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Netflix...</message>
+          </vui>
+          <description>Instant Favorites</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/68/59/68599572-191b-488d-a273-d57a3812bde6.JPG?v=2#174x130_Netflix_meta.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,394707D1,7000,A1B1D4D1F7F98FA0D701A52EDCF74F5739)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802394707d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Netflix 0205</name>
+          <vui>
+            <visiblephrase>Netflix</visiblephrase>
+            <phrase>Net Flix</phrase>
+            <phrase>Net Flicks</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Netflix...</message>
+          </vui>
+          <description>Instant Favorites</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/68/59/68599572-191b-488d-a273-d57a3812bde6.JPG?v=2#174x130_Netflix_meta.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:394707D1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:U: VEVO 0917</name>
+          <vui>
+            <visiblephrase>VEVO</visiblephrase>
+            <phrase>Vevo</phrase>
+            <phrase>Veevoo</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching VEVO...</message>
+          </vui>
+          <description>Music Videos</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/80/4b/804b4595-1a54-4316-bd9f-2a76cfe4a047.JPG?v=1#slot-VEVO-meta-01-174x130.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,304E07D1,00007000,ADD9DE788FF6F204B9163DE67D5AA8E430)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802304e07d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: VEVO 0917</name>
+          <vui>
+            <visiblephrase>VEVO</visiblephrase>
+            <phrase>Vevo</phrase>
+            <phrase>Veevo</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching VEVO...</message>
+          </vui>
+          <description>Music Videos</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/80/4b/804b4595-1a54-4316-bd9f-2a76cfe4a047.JPG?v=1#slot-VEVO-meta-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:304E07D1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>L:A: SearchApps</name>
+          <vui>
+            <responsetype>Maintain</responsetype>
+          </vui>
+          <description>Search Apps</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_search.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>search:filter=XboxAppItem</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:FAM:I:Disney 0730</name>
+          <vui>
+            <visiblephrase>Disney</visiblephrase>
+            <phrase>Disney</phrase>
+            <phrase>Dis nee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Disney...</message>
+          </vui>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/47/4b/474b7e7f-c3f1-4e11-b99c-31ef1db03329.JPG?v=1#slot-DisneyUber-01-174x130.JPG</shallowimg>
+          <condition>EcoIsFamily()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:524607D1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:FAM:U:Disney 0730</name>
+          <vui>
+            <visiblephrase>Disney</visiblephrase>
+            <phrase>Disney</phrase>
+            <phrase>dis nee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Disney...</message>
+          </vui>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/47/4b/474b7e7f-c3f1-4e11-b99c-31ef1db03329.JPG?v=1#slot-DisneyUber-01-174x130.JPG</shallowimg>
+          <condition>
+            <condition>EcoIsFamily()</condition>
+            <condition>!EcoGameOfferAvailable(1,524607D1,7000,17C9327EC79D6682B0EC9932946641D652)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802524607d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>ABG - Paid Ad Apps Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1A;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Adult)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad Teen- Apps Twist</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1T;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>
+            <condition>EcoUserAgeGroup(Teen)</condition>
+            <condition>!EcoLiveTier(none)</condition>
+          </condition>
+        </slot>
+        <slot>
+          <name>ABG: Paid Ad - Apps Freebird</name>
+          <vui>
+            <visiblephrase>Advertisement</visiblephrase>
+          </vui>
+          <metadata>
+            <property>
+              <name>showdesc</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>showcontrollerrequired</name>
+              <value>no</value>
+            </property>
+            <property>
+              <name>advertisement</name>
+              <value>yes</value>
+            </property>
+          </metadata>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>LUAXZP</format>
+            <path>http://epix.xbox.com/shaXam/0204/08/80/08802b38-908f-4f93-b71f-948c9a3599fc.lzp?v=1#Dashboard.Slot.Advertising_v34.lzp</path>
+            <param>PageGroup=XLUSE1F;SlotWidth=174;SlotHeight=130;ImageRotationTime=0;ImpVisibilityTime=300;AdVideoPlayerURI=http://epix.xbox.com/shaXam/0204/eb/f8/ebf8281f-2c73-485d-be5c-c9e00ee001a4.lzp?v=1#Dashboard.Dest.Advertising_v34.lzp</param>
+          </deepasset>
+          <condition>EcoLiveTier(none)</condition>
+        </slot>
+        <slot>
+          <name>A:FB:U:Disney 0730</name>
+          <vui>
+            <visiblephrase>Disney</visiblephrase>
+            <phrase>Disney</phrase>
+            <phrase>dis nee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Disney...</message>
+          </vui>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/47/4b/474b7e7f-c3f1-4e11-b99c-31ef1db03329.JPG?v=1#slot-DisneyUber-01-174x130.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,524607D1,7000,17C9327EC79D6682B0EC9932946641D652)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802524607d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:FB:I:Disney 0730</name>
+          <vui>
+            <visiblephrase>Disney</visiblephrase>
+            <phrase>Disney</phrase>
+            <phrase>dis nee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Disney...</message>
+          </vui>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/47/4b/474b7e7f-c3f1-4e11-b99c-31ef1db03329.JPG?v=1#slot-DisneyUber-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:524607D1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:U: Fox Now 0920</name>
+          <vui>
+            <visiblephrase>FOX NOW</visiblephrase>
+            <phrase>Fox Now</phrase>
+            <phrase>Fox</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching FOX NOW...</message>
+          </vui>
+          <description>Full Episodes</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/69/fc697711-ffb8-4dbb-9e0b-7f22c56a75fb.JPG?v=1#slot-FoxBroadcast-meta-01-174x130.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,574307D1,00007000,06ADA8619BD4F295C857EDCCF3883A3057)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802574307d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:U:XAI: Fox Now 0920</name>
+          <vui>
+            <visiblephrase>FOX NOW</visiblephrase>
+            <phrase>Fox Now</phrase>
+            <phrase>Fox</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching FOX NOW...</message>
+          </vui>
+          <description>Now on Comcast</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/69/fc697711-ffb8-4dbb-9e0b-7f22c56a75fb.JPG?v=1#slot-FoxBroadcast-meta-01-174x130.JPG</shallowimg>
+          <condition>EcoGameOfferAvailable(1,473007D1,00007000,2F5FCB11FD8C304C336D05B072DB527C47)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802574307d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Fox Now 0920</name>
+          <vui>
+            <visiblephrase>FOX NOW</visiblephrase>
+            <phrase>Fox Now</phrase>
+            <phrase>Fox</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching FOX NOW...</message>
+          </vui>
+          <description>Full Episodes</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/fc/69/fc697711-ffb8-4dbb-9e0b-7f22c56a75fb.JPG?v=1#slot-FoxBroadcast-meta-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:574307D1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:U: Twitch 0917</name>
+          <vui>
+            <visiblephrase>Twitch</visiblephrase>
+            <phrase>twich</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Twitch...</message>
+          </vui>
+          <description>Live Gameplay</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/3e/62/3e62c641-e0b4-4119-b6a5-b7b445aa64d5.JPG?v=1#slot-TwitchTV-meta-01-174x130.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,334A07D1,7000,57E8FFEC1B9DEE15ECCE39F602FBD6E333)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802334a07d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Twitch 0917</name>
+          <vui>
+            <visiblephrase>Twitch</visiblephrase>
+            <phrase>twich</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Twitch...</message>
+          </vui>
+          <description>Live Gameplay</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/3e/62/3e62c641-e0b4-4119-b6a5-b7b445aa64d5.JPG?v=1#slot-TwitchTV-meta-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:334A07D1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:U: GameSpot 0917</name>
+          <vui>
+            <visiblephrase>GameSpot TV</visiblephrase>
+            <phrase>Gayme Spot Tee Vee</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching GameSpot TV...</message>
+          </vui>
+          <description>Gaming Videos</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/51/a9/51a9a104-c756-448a-87e0-1bf89ee28d9a.JPG?v=1#slot-GameSpot-meta-174x130.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,395507D1,00007000,69473BA418551B68D144BA114676E5DB39)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802395507d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Gamespot 0917</name>
+          <vui>
+            <visiblephrase>GameSpot TV</visiblephrase>
+            <phrase>Gayme Spot Tee Vee</phrase>
+            <phrase>Gayme Spot</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching GameSpot TV...</message>
+          </vui>
+          <description>Gaming Videos</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/51/a9/51a9a104-c756-448a-87e0-1bf89ee28d9a.JPG?v=1#slot-GameSpot-meta-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:395507D1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>A:SV:U: Popcornflix 0917</name>
+          <vui>
+            <visiblephrase>Popcornflix</visiblephrase>
+            <phrase>Pop corn flicks</phrase>
+            <phrase>Popcorn</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Popcornflix...</message>
+          </vui>
+          <description>Great Movies</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/2a/51/2a51fb2c-4d63-40d4-aaba-96ae14c40316.JPG?v=1#slot-Popcornflix-meta-01-174x130.JPG</shallowimg>
+          <condition>
+            <condition>EcoLiveTier(Silver)</condition>
+            <condition>!EcoGameOfferAvailable(1,454B07D1,7000,ADFF06D3FED23E8B819AA80B244A30D345)</condition>
+          </condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802454b07d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:U: Popcornflix 0917</name>
+          <vui>
+            <visiblephrase>popcornflix</visiblephrase>
+            <phrase>popcornflix</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching popcornflix...</message>
+          </vui>
+          <description>Free Movies</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/2a/51/2a51fb2c-4d63-40d4-aaba-96ae14c40316.JPG?v=1#slot-Popcornflix-meta-01-174x130.JPG</shallowimg>
+          <condition>!EcoGameOfferAvailable(1,454B07D1,7000,ADFF06D3FED23E8B819AA80B244A30D345)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>appdetails:MediaId=66acd000-77fe-1000-9115-d802454b07d1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Popcornflix 0917</name>
+          <vui>
+            <visiblephrase>popcornflix</visiblephrase>
+            <phrase>popcornflix</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching popcornflix...</message>
+          </vui>
+          <description>Free Movies</description>
+          <rating>267242991</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/2a/51/2a51fb2c-4d63-40d4-aaba-96ae14c40316.JPG?v=1#slot-Popcornflix-meta-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:454B07D1</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>A:I: Slacker Radio 0910</name>
+          <vui>
+            <visiblephrase>Slacker Radio</visiblephrase>
+            <phrase>Slacker Raydeeoh</phrase>
+            <responsetype>ImplicitYes</responsetype>
+            <message>Launching Slacker Radio...</message>
+          </vui>
+          <description>Free Radio</description>
+          <rating>-17957139</rating>
+          <shallowimg>http://epix.xbox.com/shaXam/0201/86/56/865624a1-b03d-4e12-9ba1-1b1cfc70bca5.JPG?v=1#slot-SlackerRadio-meta-01-174x130.JPG</shallowimg>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToURI</cmd>
+            <param>app:485307D1</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+    </channeldef>
+  </channel>
+  <channel>
+    <id>SETTINGS</id>
+    <channeldef layouttemplate="epix://template6hd.xur">
+      <description>settings</description>
+      <type>online</type>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>System</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_SYSTEM_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_SYSTEM_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_console.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToSettings</cmd>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>Profile (Enabled)</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_PROFILE_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_PROFILE_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_pic.png</param>
+          </deepasset>
+          <condition>EcoUserSignedIn()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcShowGamerCard</cmd>
+          </onclick>
+        </slot>
+        <slot>
+          <name>Profile (Disabled)</name>
+          <metadata>
+            <property>
+              <name>enabled</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_PROFILE_VUI_DISPLAY)% </description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_pic.png</param>
+          </deepasset>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>Preferences</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_PREFERENCES_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <description>Preferences</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_settingspreferences.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcShowOptionsUI</cmd>
+            <param>
+            </param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>Kinect (Enable)</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_KINECTID_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_KINECTID_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_kinect_device.png</param>
+          </deepasset>
+          <condition>EcoKinectAvailable()</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToSceneInApp</cmd>
+            <param>consolesettings.xzp</param>
+            <param2>KinectSettings.xur</param2>
+          </onclick>
+        </slot>
+        <slot>
+          <name>Kinect (Disabled)</name>
+          <metadata>
+            <property>
+              <name>enabled</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_KINECTID_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_kinect_device.png</param>
+          </deepasset>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>Account (Enabled)</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_ACCOUNT_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_ACCOUNT_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_accountmanagement.png</param>
+          </deepasset>
+          <condition>!EcoLiveTier(None)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcAccountManagement</cmd>
+          </onclick>
+        </slot>
+        <slot>
+          <name>Account (Disabled)</name>
+          <metadata>
+            <property>
+              <name>enabled</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>Account</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_accountmanagement.png</param>
+          </deepasset>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>Privacy (Enabled)</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_ONLINESAFETY_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <metadata>
+            <property>
+              <name>autoid</name>
+              <value>settingsSlot_Privacy</value>
+            </property>
+          </metadata>
+          <description>Privacy</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_privacy.png</param>
+          </deepasset>
+          <condition>!EcoLiveTier(None)</condition>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToPamApp</cmd>
+            <param>dash.privacyui.xex</param>
+          </onclick>
+        </slot>
+        <slot>
+          <name>Privacy (Disabled)</name>
+          <metadata>
+            <property>
+              <name>enabled</name>
+              <value>no</value>
+            </property>
+          </metadata>
+          <description>Privacy</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_privacy.png</param>
+          </deepasset>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot showcontrollerrequired="yes">
+          <name>Family</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_FAMILY_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvComResStr(IDS_CONTROLLER_REQUIRED_VUI_MESSAGE)%</message>
+          </vui>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_FAMILY_VUI_DISPLAY)</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_family.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcNavToPamApp</cmd>
+            <param>dash.familycenter.xex</param>
+          </onclick>
+        </slot>
+      </slotgroup>
+      <slotgroup>
+        <slot>
+          <name>Turn Off</name>
+          <vui>
+            <phrase>%EvResStr(IDS_SLOT_SETTINGS_TURNOFF_VUI_PRON)%</phrase>
+            <responsetype>RequestYesNo</responsetype>
+            <message>%EvResStr(IDS_SLOT_SETTINGS_TURNOFF_VUI_MESSAGE)%</message>
+          </vui>
+          <description>%EvResStr(IDS_SLOT_SETTINGS_TURNOFF_VUI_DISPLAY)%</description>
+          <rating>267242991</rating>
+          <deepasset>
+            <format>EpixScene</format>
+            <path>EsLiveTile</path>
+            <param>common://ico_64x_turnoff.png</param>
+          </deepasset>
+          <onclick>
+            <button>A</button>
+            <helptext>Select</helptext>
+            <action>EpixCmd</action>
+            <cmd>EcShutdownConsole</cmd>
+          </onclick>
+        </slot>
+      </slotgroup>
+    </channeldef>
+  </channel>
+</manifest>
